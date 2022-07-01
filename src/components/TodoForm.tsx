@@ -1,21 +1,34 @@
-const TodoForm = () => {
+import { Todo } from '../components/model/Todo';
+
+interface Props {
+  onNewTodo: (todo: Todo) => void;
+}
+
+const TodoForm: React.FC<Props> = ({ onNewTodo }) => {
   const submitHandler = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log('submit');
+
+    const newTodo: Todo = {
+      id: 0,
+      text: 'Hello World',
+    };
+
+    onNewTodo(newTodo);
   };
 
   return (
-    <form onSubmit={submitHandler}>
-      <input className={newFunction()} type="text" placeholder="Add Todo .." />
-      <button className="bg-orange-500 py-3 px-5 rounded-xl text-white font-bold shadow-lg" type="submit">
+    <form className="flex justify-between gap-3 mt-5" onSubmit={submitHandler}>
+      <input
+        className="basis-3/4 border-4
+         border-orange-500 py-2 focus:outline-none rounded-3xl text-center font-bold text-orange-600"
+        type="text"
+        placeholder="Add Todo .."
+      />
+      <button className="basis-1/4 bg-orange-500 py-3 px-5 rounded-xl text-white font-bold shadow-lg" type="submit">
         Add Todo
       </button>
     </form>
   );
-
-  function newFunction(): string | undefined {
-    return 'focus:outline-none border-4 border-orange-500 mr-3 py-2 shadow-lg';
-  }
 };
 
 export default TodoForm;

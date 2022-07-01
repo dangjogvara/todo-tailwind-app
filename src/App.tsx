@@ -1,21 +1,22 @@
-import Header from './components/Header';
-import Todos from './components/TodoList';
-import TodoForm from './components/TodoForm';
+import { useState } from 'react';
 
-const App = () => {
-  // const [todos, setTodos] = useState([]);
+import Header from './components/Header';
+import TodoForm from './components/TodoForm';
+import { Todo } from './components/model/Todo';
+
+const initTodos: String[] = [];
+
+const App: React.FC = () => {
+  const [todos, setTodos] = useState(initTodos);
+
+  const addTodo = (todo: Todo) => {
+    console.log(todo);
+  };
 
   return (
-    <div className="container">
-      <div>
-        <Header name="Todo List" />
-      </div>
-      <div>
-        <Todos />
-      </div>
-      <div>
-        <TodoForm />
-      </div>
+    <div className="container mx-auto py-5 w-1/2">
+      <Header name="Todo List" />
+      <TodoForm onNewTodo={addTodo} />
     </div>
   );
 };
