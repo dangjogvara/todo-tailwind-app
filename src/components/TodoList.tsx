@@ -7,8 +7,7 @@ interface Props {
 
 const TodoList = (props: Props) => {
   return (
-    <div>
-      <h1 className="font-bold text-center">Todos</h1>
+    <div className="flex gap-3 mt-5">
       {props.todos.map(todo => (
         <SingleTodo todo={todo} key={todo.id} />
       ))}

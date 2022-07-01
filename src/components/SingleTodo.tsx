@@ -6,8 +6,8 @@ type Props = {
 
 const SingleTodo = (props: Props) => {
   return (
-    <div className="flex flex-row columns-3 bg-gray-200 max-w-xs h-48 mt-3 rounded-xl">
-      <p className="">{props.todo.text}</p>
+    <div className="flex bg-gray-200 w-1/2 h-48 mt-3 rounded-xl columns-2xs ">
+      <p className="break-words px-3 py-3">{props.todo.text}</p>
     </div>
   );
 };

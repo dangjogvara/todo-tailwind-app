@@ -24,6 +24,7 @@ const TodoForm = ({ onNewTodo }: Props) => {
     };
 
     onNewTodo(newTodo);
+    setEnteredText('');
   };
 
   return (
@@ -32,6 +33,7 @@ const TodoForm = ({ onNewTodo }: Props) => {
         className="basis-3/4 border-4
          border-orange-500 py-2 focus:outline-none rounded-3xl text-center font-bold text-orange-600"
         type="text"
+        maxLength={40}
         value={enteredText}
         onChange={textChangeHandler}
         placeholder="Add Todo .."
