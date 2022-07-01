@@ -1,7 +1,18 @@
-import Todo from './Todo';
+import SingleTodo from './SingleTodo';
+import { Todo } from './model/Todo';
 
-const TodoList = () => {
-  return <Todo />;
+interface Props {
+  todos: Todo[];
+}
+
+const TodoList = (props: Props) => {
+  return (
+    <div>
+      {props.todos.map(todo => (
+        <SingleTodo todo={todo} key={todo.id} />
+      ))}
+    </div>
+  );
 };
 
 export default TodoList;
