@@ -2,7 +2,7 @@ import Header from './components/Header';
 
 const App = () => {
   return (
-    <div className="App">
+    <div className="flex">
       <Header name="Todo List" />
     </div>
   );
