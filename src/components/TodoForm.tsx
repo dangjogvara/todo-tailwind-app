@@ -1,5 +1,7 @@
 import { Todo } from '../components/model/Todo';
 
+import { v4 as uuidv4 } from 'uuid';
+
 type Props = {
   onNewTodo: (todo: Todo) => void;
 };
@@ -9,7 +11,7 @@ const TodoForm = ({ onNewTodo }: Props) => {
     event.preventDefault();
 
     const newTodo: Todo = {
-      id: 0,
+      id: uuidv4(),
       text: 'Hello World',
     };
 

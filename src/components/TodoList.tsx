@@ -7,11 +7,11 @@ interface Props {
 
 const TodoList = (props: Props) => {
   return (
-    <div>
+    <ul>
       {props.todos.map(todo => (
         <SingleTodo todo={todo} key={todo.id} />
       ))}
-    </div>
+    </ul>
   );
 };
 

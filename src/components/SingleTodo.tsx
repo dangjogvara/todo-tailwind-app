@@ -5,7 +5,11 @@ type Props = {
 };
 
 const SingleTodo = (props: Props) => {
-  return <p>{props.todo.text}</p>;
+  return (
+    <li className="list-decimal">
+      <h1>{props.todo.id}</h1>
+    </li>
+  );
 };
 
 export default SingleTodo;
