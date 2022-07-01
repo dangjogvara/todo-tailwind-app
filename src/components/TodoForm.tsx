@@ -12,7 +12,7 @@ const TodoForm = ({ onNewTodo }: Props) => {
 
     const newTodo: Todo = {
       id: uuidv4(),
-      text: 'Hello World',
+      text: 'Hello Worldksmcksdmnckskcskckscksnkcnskncksnckkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk',
     };
 
     onNewTodo(newTodo);

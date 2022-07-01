@@ -1,5 +1,5 @@
 const Card = props => {
-  return <div className="rounded-xl shadow-md">{props.children}</div>;
+  return <div className="bg-gray-100 rounded-xl shadow-md mt-2">{props.children}</div>;
 };
 
 export default Card;
