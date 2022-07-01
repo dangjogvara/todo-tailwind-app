@@ -1,10 +1,10 @@
 import { Todo } from '../components/model/Todo';
 
-interface Props {
+type Props = {
   onNewTodo: (todo: Todo) => void;
-}
+};
 
-const TodoForm: React.FC<Props> = ({ onNewTodo }) => {
+const TodoForm = ({ onNewTodo }: Props) => {
   const submitHandler = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
